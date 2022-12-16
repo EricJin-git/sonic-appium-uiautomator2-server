@@ -1,6 +1,6 @@
 {
   "name": "appium-uiautomator2-server",
-  "version": "5.7.4",
+  "version": "5.7.6",
   "description": "A netty server with uiautomator2 handlers",
   "main": "index.js",
   "repository": {
@@ -48,6 +48,7 @@
     "android-apidemos": "^4.0.0",
     "appium-adb": "^9.0.0",
     "bluebird": "^3.7.2",
+    "conventional-changelog-conventionalcommits": "^5.0.0",
     "fancy-log": "^2.0.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.5.0",

@@ -529,7 +529,7 @@ public class DeviceCommandsTest extends BaseTest {
         // in all-caps, whereas their actual text is rather like 'Tab 13', 'Tab 26', etc.
         // The arguments of methods findElement() and scrollToText() are case-sensitive,
         // therefore we need to use different sets of inputs for different target devices.
-        int apiLevel = (int) getField(UiDevice.class, "API_LEVEL_ACTUAL", getUiDevice());
+        int apiLevel = Build.VERSION.SDK_INT;
 
         String[] items = apiLevel < 24
             ? new String[] { "Tab 13", "Tab 26", "Tab 5" }  // up to Android 6.0 Marshmallow

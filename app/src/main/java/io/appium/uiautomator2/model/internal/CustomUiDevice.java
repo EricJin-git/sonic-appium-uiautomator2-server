@@ -58,7 +58,6 @@ public class CustomUiDevice {
     private static final int CHANGE_ROTATION_TIMEOUT_MS = 2000;
 
     private static final String FIELD_M_INSTRUMENTATION = "mInstrumentation";
-    private static final String FIELD_API_LEVEL_ACTUAL = "API_LEVEL_ACTUAL";
 
     private static CustomUiDevice INSTANCE = null;
     private final Method METHOD_FIND_MATCH;
@@ -66,12 +65,10 @@ public class CustomUiDevice {
     private final Class<?> ByMatcherClass;
     private final Constructor<?> uiObject2Constructor;
     private final Instrumentation mInstrumentation;
-    private final Object API_LEVEL_ACTUAL;
     private GestureController gestureController;
 
     private CustomUiDevice() {
         this.mInstrumentation = (Instrumentation) getField(UiDevice.class, FIELD_M_INSTRUMENTATION, Device.getUiDevice());
-        this.API_LEVEL_ACTUAL = getField(UiDevice.class, FIELD_API_LEVEL_ACTUAL, Device.getUiDevice());
         this.ByMatcherClass = ReflectionUtils.getClass("androidx.test.uiautomator.ByMatcher");
         this.METHOD_FIND_MATCH = getMethod(ByMatcherClass, "findMatch", UiDevice.class, BySelector.class, AccessibilityNodeInfo[].class);
         this.METHOD_FIND_MATCHES = getMethod(ByMatcherClass, "findMatches", UiDevice.class, BySelector.class, AccessibilityNodeInfo[].class);
@@ -95,10 +92,6 @@ public class CustomUiDevice {
             return getInstrumentation().getUiAutomation(flags);
         }
         return getInstrumentation().getUiAutomation();
-    }
-
-    public int getApiLevelActual() {
-        return (Integer) API_LEVEL_ACTUAL;
     }
 
     private UiObject2 toUiObject2(Object selector, AccessibilityNodeInfo node) {
