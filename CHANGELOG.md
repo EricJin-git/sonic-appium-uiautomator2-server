@@ -1,3 +1,10 @@
+## [5.7.8](https://github.com/appium/appium-uiautomator2-server/compare/v5.7.7...v5.7.8) (2023-02-07)
+
+
+### Miscellaneous Chores
+
+* Tune parameter value in the error message ([5ef9f65](https://github.com/appium/appium-uiautomator2-server/commit/5ef9f65646b352f83cf49f91a8f97ab8c6d0e57d))
+
 ## [5.7.7](https://github.com/appium/appium-uiautomator2-server/compare/v5.7.6...v5.7.7) (2023-01-17)
 
 

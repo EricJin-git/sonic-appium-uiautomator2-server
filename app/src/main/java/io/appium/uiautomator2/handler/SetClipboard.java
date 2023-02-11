@@ -57,7 +57,7 @@ public class SetClipboard extends SafeRequestHandler {
             throw new InvalidArgumentException(
                     String.format("Only '%s' content types are supported. '%s' is given instead",
                             ClipDataType.supportedDataTypes(),
-                            contentType));
+                            model.contentType == null ? contentType.name() : model.contentType));
         }
         return new AppiumResponse(getSessionId(request));
     }
