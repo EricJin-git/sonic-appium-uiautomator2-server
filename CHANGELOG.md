@@ -1,3 +1,10 @@
+## [5.8.0](https://github.com/appium/appium-uiautomator2-server/compare/v5.7.8...v5.8.0) (2023-03-09)
+
+
+### Features
+
+* get installed packages information ([#502](https://github.com/appium/appium-uiautomator2-server/issues/502)) ([94dcd37](https://github.com/appium/appium-uiautomator2-server/commit/94dcd379280989152fc692bd45838693e7614b47))
+
 ## [5.7.8](https://github.com/appium/appium-uiautomator2-server/compare/v5.7.7...v5.7.8) (2023-02-07)
 
 

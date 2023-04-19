@@ -48,6 +48,7 @@ import io.appium.uiautomator2.handler.GetElementAttribute;
 import io.appium.uiautomator2.handler.GetElementScreenshot;
 import io.appium.uiautomator2.handler.GetName;
 import io.appium.uiautomator2.handler.GetOrientation;
+import io.appium.uiautomator2.handler.GetPackages;
 import io.appium.uiautomator2.handler.GetRect;
 import io.appium.uiautomator2.handler.GetRotation;
 import io.appium.uiautomator2.handler.GetSessionDetails;
@@ -161,7 +162,9 @@ public class AppiumServlet implements IHttpServlet {
 
     private void registerGetHandler() {
         register(getHandler, new Status("/status"));
+        register(getHandler, new GetPackages("/appium/device/apps"));
         register(getHandler, new GetSessions("/sessions"));
+        register(getHandler, new GetPackages("/session/:sessionId/appium/device/apps"));
         register(getHandler, new GetSessionDetails("/session/:sessionId"));
         register(getHandler, new CaptureScreenshot("/session/:sessionId/screenshot"));
         register(getHandler, new GetOrientation("/session/:sessionId/orientation"));
